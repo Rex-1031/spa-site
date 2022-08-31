@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Roboto&display=swap');
+
+:root{
+  /* Color Scheme 1 */
+  --light-bg:rgb(241, 252, 252);
+  --light-shade: rgb(248, 248, 248);
+  --light-accent: #cdcdcd;
+  --main-color-light: rgb(108, 148, 223);
+  --main-color: rgb(55, 87, 215);
+  --main-color-dark: #0428b9;
+  --dark-accent: #494949;
+  --dark-shade: #212121;
+  --dark-bg: #0f0f0f; 
+
+  --primary: #3656d7;
+  --info: #212121;
+  --success: #7cdc76;
+  --warning: #faac3e;
+  --danger: #f44336;
+
+  --sidebar-flex:1.5;
+  --condiv-flex:6;
+  --fontsize-p:1.2rem;
+  --fontsize-nav:1.6rem;
+  --typing-font:3rem;
+
+}
+html{
+  box-sizing: border-box;
+}
+
+*
+{
+margin:0;
+padding: 0;
+}
+body
+{
+font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Raleway', sans-serif;
+  margin: 15px 0;
+}
+
+p{
+  font-size: var(--fontsize-p);
+  line-height: 1.6;
+  letter-spacing: .5%;
+  margin: 15px 0;
+}
+.App
+{
+display: flex;
+width: 100vw;
+min-height: 100vh;
+}
+/* .condiv class is for the right side content container*/
+.condiv
+{
+padding: 100px ;
+background-color: var(--light-shade);
+flex:var(--condiv-flex);
+}
+
+nav{
+  padding: 60px 30px 0 30px;
+  flex: var(--sidebar-flex);
+  background: var(--main-color-light);
+  background: linear-gradient(180deg, rgb(108, 148, 223,1) 50%, rgb(55, 87, 215, 1)80%);
+}
+
+ul{
+  font-size: var(--fontsize-nav);
+  text-align: left;
+}
+
+ul li{
+  margin: 40px;
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.link{
+  text-decoration: none;
+  color: var(--light-bg);
+  text-transform: uppercase;
+}
+.link:hover{
+  text-decoration: underline;
+  color: var(--light-bg);
+
+}
+.active{
+  font-weight: bolder;
+}
+
+.social{
+  position: absolute;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+}
+
+.social a{
+  padding: 0 10px;
+  font-size: 25px;
+  color: var(--light-accent);
+}
+
+.social a:hover{
+  color: var(--dark-accent);
+}
+
+.social-alt{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-alt a{
+  padding-right: 10px;
+  font-size: 25px;
+  color: var(--dark-shade);
+}
+
+.social-alt a:hover{
+  color: var(--dark-accent);
+}
+
+
+.profilepic{
+  width: 200px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typingeffect{
+  font-size: 2em;
+  font-family: 'Raleway';
+}
+
+.subtopic{
+  margin: 10px 0 30px 0;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+
+.widecard{
+  border: 1px solid var(--dark-accent);
+  display: flex;
+  margin: 30px 0;
+  padding: 20px;
+  width: 50vw;
+}
+
+.widecard:hover{
+  color: var(--dark-bg);
+  background-color: var(--light-shade);
+  box-shadow: 0 10px 20px rgba( 0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
