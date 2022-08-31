@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import profile from '../assets/profile-1-bw.jpg';
 import '../App.css'
-import Social from '../components/Social';
+const Home = ()=>{
 
- class Home extends Component {
-  render() {
     return (
         <div className='condiv home'>
-            <img src={profile} className="profilepic"></img>
+            <img src={profile} className="profilepic" alt='avatar'></img>
             <ReactTypingEffect 
                 className='typingeffect'
                 text={['I am Steve Clair', 'I build Web Sites and Apps.']}
@@ -17,7 +15,7 @@ import Social from '../components/Social';
             />
         </div>
     )
-  }
+
 }
 
 export default Home

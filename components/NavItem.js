@@ -2,21 +2,18 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 
-class NavItem extends Component{
-    render(){
-
+const NavItem = () =>{
         return (
             <li id={this.props.item}>
                 <Link 
                     className='link'
                     to={this.props.tolink}
-                    // onClick={this.props.activec.bind(this,this.props.item)}
+                    onClick={()=>this.activeItem(this.item)}
                 >
                     {this.props.item}
                 </Link>
             </li>
       )
-    }
 }
 
 export default NavItem

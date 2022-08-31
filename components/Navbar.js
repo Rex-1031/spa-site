@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faFacebookF , } from '@fortawesome/free-brands-svg-icons';
 import NavItem from './NavItem';
 import '../App.css'
 import Social from './Social';
