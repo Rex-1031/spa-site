@@ -1,39 +1,50 @@
-import React, { Component } from 'react';
-import NavItem from './NavItem';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
+
 import '../App.css'
-import Social from './Social';
+import { SidebarData } from './SidebarData';
 
- class Navbar extends Component {
-    constructor(props){
-        super(props)
-        this.state={
-            'NavItemActive':''
-        }
-    }
 
-    activeItem =(x)=>{
-        if(this.state.NavItemId.length>0){
-            document.getElementById(this.state.NavItemActive).classList.remove('active')
-        }
-        this.setState({'NavItemActive': x}, ()=>{
-            document.getElementById(this.state.NavItemActive).classList.add('active')
-        })
-    }
 
-  render() {
+const Navbar =()=> {
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar =()=>setSidebar(!sidebar);
+
     return (
-        <nav>
-            <ul>
-                <NavItem item="Home" tolink="/" activec={this.activeitem}></NavItem>
-                <NavItem item="About" tolink="/about" activec={this.activeitem}></NavItem>
-                <NavItem item="Education" tolink="/education" activec={this.activeitem}></NavItem>
-                <NavItem item="Skills" tolink="/skills"activec={this.activeitem}></NavItem>
-                <NavItem item="Contact" tolink="/contact" activec={this.activeitem}></NavItem>
+    <div>
+        <div className='navbar'>
+            <Link to='#' className='menu-bars'>
+                <FontAwesomeIcon className='icon' icon={faBars} onClick={showSidebar}/>
+            </Link>
+        </div>
+        <nav className={sidebar? 'nav-menu active': 'nav-menu'}>
+            <ul className='nav-menu-items'>
+                <li className='navbar-toggle'>
+                    <Link to='#' className='menu-bars'>
+                        <FontAwesomeIcon className='icon' icon={faX} onClick={showSidebar}/>
+                    </Link>
+                </li>
+                {SidebarData.map((item, index)=>{
+                    return(
+                        <li className={item.cName} onClick={showSidebar}>
+                            <Link className='link' to={item.path}>
+                                <span>{item.title}</span>
+                            </Link>
+                        </li>
+
+                    )
+                })
+
+                }
             </ul>
-            <Social />
+
+
         </nav>
+    </div>
     )
-  }
+
 }
 
 
