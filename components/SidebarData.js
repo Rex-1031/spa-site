@@ -10,13 +10,8 @@ export const SidebarData =[
         cName: 'nav-text'
     },
     {
-        title: 'Education',
-        path:'/education',
-        cName: 'nav-text'
-    },
-    {
-        title: 'Skills',
-        path:'/skills',
+        title: 'Experience',
+        path:'/experience',
         cName: 'nav-text'
     },
     {
